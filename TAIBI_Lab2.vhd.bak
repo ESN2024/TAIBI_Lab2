@@ -1,0 +1,37 @@
+Library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+
+entity Lab2 is
+	port (
+	clk : in std_logic;
+	reset : in std_logic;
+	start : in std_logic;
+	leds_digit_1 : out std_logic_vector(7 downto 0)
+	);
+end entity Lab2;
+
+architecture behav of Lab2 is
+
+	 component TAIBI_Lab2 is
+        port (
+            clk_clk                            : in  std_logic                    := 'X'; -- clk
+            reset_reset_n                      : in  std_logic                    := 'X'; -- reset_n
+            start_external_connection_export   : in  std_logic                    := 'X'; -- export
+            digit_1_external_connection_export : out std_logic_vector(7 downto 0)         -- export
+        );
+    end component TAIBI_Lab2;
+	
+	begin
+	
+    u0 : component TAIBI_Lab2
+        port map (
+            clk_clk                            => clk,                            --                         clk.clk
+            reset_reset_n                      => reset,                      --                       reset.reset_n
+            start_external_connection_export   => start,   --   start_external_connection.export
+            digit_1_external_connection_export => leds_digit_1  -- digit_1_external_connection.export
+        );
+
+			
+end architecture behav;
