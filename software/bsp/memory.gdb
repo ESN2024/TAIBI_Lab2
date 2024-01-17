@@ -3,7 +3,7 @@
 # Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'TAIBI_Lab2_qsys_file'
 # SOPC Builder design path: ../../TAIBI_Lab2_qsys_file.sopcinfo
 #
-# Generated: Tue Jan 16 17:03:13 CET 2024
+# Generated: Wed Jan 17 00:44:37 CET 2024
 
 # DO NOT MODIFY THIS FILE
 #
@@ -47,4 +47,4 @@
 # by allowing GDB to cache memory contents on the host.
 
 # onchip_memory2_0
-memory 0x10000 0x19c40 cache
+memory 0x10000 0x1a028 cache

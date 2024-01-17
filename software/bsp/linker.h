@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'TAIBI_Lab2_qsys_file'
  * SOPC Builder design path: ../../TAIBI_Lab2_qsys_file.sopcinfo
  *
- * Generated: Tue Jan 16 17:03:13 CET 2024
+ * Generated: Wed Jan 17 00:44:37 CET 2024
  */
 
 /*
@@ -66,7 +66,7 @@
  */
 
 #define ONCHIP_MEMORY2_0_REGION_BASE 0x10020
-#define ONCHIP_MEMORY2_0_REGION_SPAN 39968
+#define ONCHIP_MEMORY2_0_REGION_SPAN 40968
 #define RESET_REGION_BASE 0x10000
 #define RESET_REGION_SPAN 32
 

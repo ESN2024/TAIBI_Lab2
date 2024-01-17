@@ -60,7 +60,7 @@ refer to the applicable agreement for further details.
 		(text "reset_n" (rect 213 147 468 304)(font "Arial" (color 0 0 0)))
 		(text "start_external_connection" (rect 59 163 268 339)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "export" (rect 213 187 462 384)(font "Arial" (color 0 0 0)))
-		(text " TAIBI_Lab2 " (rect 424 208 920 426)(font "Arial" ))
+		(text " system " (rect 445 208 938 426)(font "Arial" ))
 		(line (pt 208 32)(pt 272 32)(line_width 1))
 		(line (pt 272 32)(pt 272 208)(line_width 1))
 		(line (pt 208 208)(pt 272 208)(line_width 1))
