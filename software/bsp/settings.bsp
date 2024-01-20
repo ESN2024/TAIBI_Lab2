@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>17 janv. 2024 08:59:19</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1705478359524</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>20 janv. 2024 12:26:30</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1705749990571</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>.\</BspGeneratedLocation>
         <BspSettingsFile>software\bsp\settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\TAIBI_Lab2_qsys_file.sopcinfo</SopcDesignFile>

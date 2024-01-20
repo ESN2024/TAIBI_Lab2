@@ -98,6 +98,8 @@ Common symbol       size              file
 
 alt_irq             0x100             ../bsp\libhal_bsp.a(alt_irq_handler.o)
 errno               0x4               c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libc.a(lib_a-int_errno.o)
+dizaines            0x2               obj/default/main.o
+unites              0x2               obj/default/main.o
 
 Memory Configuration
 
@@ -482,10 +484,11 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
                 [!provide]                        PROVIDE (___sbss_start, ABSOLUTE (.))
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
- .sbss          0x0000000000015728        0x6 obj/default/main.o
-                0x0000000000015728                unites
+ .sbss          0x0000000000015728        0x2 obj/default/main.o
+                0x0000000000015728                centaines
+ .sbss          0x000000000001572a        0x4 obj/default/main.o
                 0x000000000001572a                dizaines
-                0x000000000001572c                centaines
+                0x000000000001572c                unites
  *fill*         0x000000000001572e        0x2 
  .sbss          0x0000000000015730        0x4 ../bsp\libhal_bsp.a(alt_irq_vars.o)
                 0x0000000000015730                alt_irq_active
