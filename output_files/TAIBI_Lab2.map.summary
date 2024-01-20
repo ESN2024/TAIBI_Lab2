@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Jan 16 22:30:01 2024
+Analysis & Synthesis Status : Successful - Sat Jan 20 16:17:07 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : TAIBI_Lab2
 Top-level Entity Name : TAIBI_Lab2
 Family : MAX 10
-Total logic elements : 1,923
-    Total combinational functions : 1,725
-    Dedicated logic registers : 965
-Total registers : 965
-Total pins : 24
+Total logic elements : 1,874
+    Total combinational functions : 1,684
+    Dedicated logic registers : 941
+Total registers : 941
+Total pins : 23
 Total virtual pins : 0
 Total memory bits : 331,264
 Embedded Multiplier 9-bit elements : 0

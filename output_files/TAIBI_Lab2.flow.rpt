@@ -1,5 +1,5 @@
 Flow report for TAIBI_Lab2
-Tue Jan 16 22:30:37 2024
+Sat Jan 20 16:17:37 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Jan 16 22:30:30 2024       ;
+; Flow Status                        ; Successful - Sat Jan 20 16:17:31 2024       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; TAIBI_Lab2                                  ;
 ; Top-level Entity Name              ; TAIBI_Lab2                                  ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,840 / 49,760 ( 4 % )                      ;
-;     Total combinational functions  ; 1,730 / 49,760 ( 3 % )                      ;
-;     Dedicated logic registers      ; 957 / 49,760 ( 2 % )                        ;
-; Total registers                    ; 957                                         ;
-; Total pins                         ; 24 / 360 ( 7 % )                            ;
+; Total logic elements               ; 1,790 / 49,760 ( 4 % )                      ;
+;     Total combinational functions  ; 1,689 / 49,760 ( 3 % )                      ;
+;     Dedicated logic registers      ; 933 / 49,760 ( 2 % )                        ;
+; Total registers                    ; 933                                         ;
+; Total pins                         ; 23 / 360 ( 6 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 331,264 / 1,677,312 ( 20 % )                ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/16/2024 22:28:35 ;
+; Start date & time ; 01/20/2024 16:16:02 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; TAIBI_Lab2          ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 44343151178700.170544051516280         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 44343151178700.170576376203148         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -94,11 +94,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:24     ; 1.0                     ; 4897 MB             ; 00:02:20                           ;
-; Fitter               ; 00:00:20     ; 1.5                     ; 5677 MB             ; 00:00:32                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4687 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.9                     ; 4847 MB             ; 00:00:08                           ;
-; Total                ; 00:01:53     ; --                      ; --                  ; 00:03:04                           ;
+; Analysis & Synthesis ; 00:01:05     ; 1.0                     ; 4893 MB             ; 00:01:53                           ;
+; Fitter               ; 00:00:17     ; 1.4                     ; 5669 MB             ; 00:00:27                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4690 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.9                     ; 4844 MB             ; 00:00:08                           ;
+; Total                ; 00:01:30     ; --                      ; --                  ; 00:02:32                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

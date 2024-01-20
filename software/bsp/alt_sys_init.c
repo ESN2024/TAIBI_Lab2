@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'TAIBI_Lab2_qsys_file'
  * SOPC Builder design path: ../../TAIBI_Lab2_qsys_file.sopcinfo
  *
- * Generated: Sat Jan 20 11:40:12 CET 2024
+ * Generated: Sat Jan 20 16:18:22 CET 2024
  */
 
 /*
