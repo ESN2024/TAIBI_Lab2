@@ -92,10 +92,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "start",
-					"strict" : false
-				},
-				{
 					"name" : "reset",
 					"strict" : false
 				},

@@ -12,8 +12,7 @@ entity TAIBI_Lab2_qsys_file is
 		digit_1_external_connection_export : out std_logic_vector(3 downto 0);        -- digit_1_external_connection.export
 		digit_2_external_connection_export : out std_logic_vector(3 downto 0);        -- digit_2_external_connection.export
 		digit_3_external_connection_export : out std_logic_vector(3 downto 0);        -- digit_3_external_connection.export
-		reset_reset_n                      : in  std_logic                    := '0'; --                       reset.reset_n
-		start_external_connection_export   : in  std_logic                    := '0'  --   start_external_connection.export
+		reset_reset_n                      : in  std_logic                    := '0'  --                       reset.reset_n
 	);
 end entity TAIBI_Lab2_qsys_file;
 
@@ -93,20 +92,6 @@ architecture rtl of TAIBI_Lab2_qsys_file is
 		);
 	end component TAIBI_Lab2_qsys_file_onchip_memory2_0;
 
-	component TAIBI_Lab2_qsys_file_start is
-		port (
-			clk        : in  std_logic                     := 'X';             -- clk
-			reset_n    : in  std_logic                     := 'X';             -- reset_n
-			address    : in  std_logic_vector(1 downto 0)  := (others => 'X'); -- address
-			write_n    : in  std_logic                     := 'X';             -- write_n
-			writedata  : in  std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
-			chipselect : in  std_logic                     := 'X';             -- chipselect
-			readdata   : out std_logic_vector(31 downto 0);                    -- readdata
-			in_port    : in  std_logic                     := 'X';             -- export
-			irq        : out std_logic                                         -- irq
-		);
-	end component TAIBI_Lab2_qsys_file_start;
-
 	component TAIBI_Lab2_qsys_file_timer_0 is
 		port (
 			clk        : in  std_logic                     := 'X';             -- clk
@@ -173,11 +158,6 @@ architecture rtl of TAIBI_Lab2_qsys_file is
 			onchip_memory2_0_s1_byteenable                 : out std_logic_vector(3 downto 0);                     -- byteenable
 			onchip_memory2_0_s1_chipselect                 : out std_logic;                                        -- chipselect
 			onchip_memory2_0_s1_clken                      : out std_logic;                                        -- clken
-			start_s1_address                               : out std_logic_vector(1 downto 0);                     -- address
-			start_s1_write                                 : out std_logic;                                        -- write
-			start_s1_readdata                              : in  std_logic_vector(31 downto 0) := (others => 'X'); -- readdata
-			start_s1_writedata                             : out std_logic_vector(31 downto 0);                    -- writedata
-			start_s1_chipselect                            : out std_logic;                                        -- chipselect
 			timer_0_s1_address                             : out std_logic_vector(2 downto 0);                     -- address
 			timer_0_s1_write                               : out std_logic;                                        -- write
 			timer_0_s1_readdata                            : in  std_logic_vector(15 downto 0) := (others => 'X'); -- readdata
@@ -192,7 +172,6 @@ architecture rtl of TAIBI_Lab2_qsys_file is
 			reset         : in  std_logic                     := 'X'; -- reset
 			receiver0_irq : in  std_logic                     := 'X'; -- irq
 			receiver1_irq : in  std_logic                     := 'X'; -- irq
-			receiver2_irq : in  std_logic                     := 'X'; -- irq
 			sender_irq    : out std_logic_vector(31 downto 0)         -- irq
 		);
 	end component TAIBI_Lab2_qsys_file_irq_mapper;
@@ -297,11 +276,6 @@ architecture rtl of TAIBI_Lab2_qsys_file is
 	signal mm_interconnect_0_onchip_memory2_0_s1_write                     : std_logic;                     -- mm_interconnect_0:onchip_memory2_0_s1_write -> onchip_memory2_0:write
 	signal mm_interconnect_0_onchip_memory2_0_s1_writedata                 : std_logic_vector(31 downto 0); -- mm_interconnect_0:onchip_memory2_0_s1_writedata -> onchip_memory2_0:writedata
 	signal mm_interconnect_0_onchip_memory2_0_s1_clken                     : std_logic;                     -- mm_interconnect_0:onchip_memory2_0_s1_clken -> onchip_memory2_0:clken
-	signal mm_interconnect_0_start_s1_chipselect                           : std_logic;                     -- mm_interconnect_0:start_s1_chipselect -> start:chipselect
-	signal mm_interconnect_0_start_s1_readdata                             : std_logic_vector(31 downto 0); -- start:readdata -> mm_interconnect_0:start_s1_readdata
-	signal mm_interconnect_0_start_s1_address                              : std_logic_vector(1 downto 0);  -- mm_interconnect_0:start_s1_address -> start:address
-	signal mm_interconnect_0_start_s1_write                                : std_logic;                     -- mm_interconnect_0:start_s1_write -> mm_interconnect_0_start_s1_write:in
-	signal mm_interconnect_0_start_s1_writedata                            : std_logic_vector(31 downto 0); -- mm_interconnect_0:start_s1_writedata -> start:writedata
 	signal mm_interconnect_0_digit_1_s1_chipselect                         : std_logic;                     -- mm_interconnect_0:digit_1_s1_chipselect -> digit_1:chipselect
 	signal mm_interconnect_0_digit_1_s1_readdata                           : std_logic_vector(31 downto 0); -- digit_1:readdata -> mm_interconnect_0:digit_1_s1_readdata
 	signal mm_interconnect_0_digit_1_s1_address                            : std_logic_vector(1 downto 0);  -- mm_interconnect_0:digit_1_s1_address -> digit_1:address
@@ -323,8 +297,7 @@ architecture rtl of TAIBI_Lab2_qsys_file is
 	signal mm_interconnect_0_timer_0_s1_write                              : std_logic;                     -- mm_interconnect_0:timer_0_s1_write -> mm_interconnect_0_timer_0_s1_write:in
 	signal mm_interconnect_0_timer_0_s1_writedata                          : std_logic_vector(15 downto 0); -- mm_interconnect_0:timer_0_s1_writedata -> timer_0:writedata
 	signal irq_mapper_receiver0_irq                                        : std_logic;                     -- jtag_uart_0:av_irq -> irq_mapper:receiver0_irq
-	signal irq_mapper_receiver1_irq                                        : std_logic;                     -- start:irq -> irq_mapper:receiver1_irq
-	signal irq_mapper_receiver2_irq                                        : std_logic;                     -- timer_0:irq -> irq_mapper:receiver2_irq
+	signal irq_mapper_receiver1_irq                                        : std_logic;                     -- timer_0:irq -> irq_mapper:receiver1_irq
 	signal nios2_gen2_0_irq_irq                                            : std_logic_vector(31 downto 0); -- irq_mapper:sender_irq -> nios2_gen2_0:irq
 	signal rst_controller_reset_out_reset                                  : std_logic;                     -- rst_controller:reset_out -> [irq_mapper:reset, mm_interconnect_0:nios2_gen2_0_reset_reset_bridge_in_reset_reset, onchip_memory2_0:reset, rst_controller_reset_out_reset:in, rst_translator:in_reset]
 	signal rst_controller_reset_out_reset_req                              : std_logic;                     -- rst_controller:reset_req -> [nios2_gen2_0:reset_req, onchip_memory2_0:reset_req, rst_translator:reset_req_in]
@@ -332,12 +305,11 @@ architecture rtl of TAIBI_Lab2_qsys_file is
 	signal reset_reset_n_ports_inv                                         : std_logic;                     -- reset_reset_n:inv -> rst_controller:reset_in0
 	signal mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_read_ports_inv  : std_logic;                     -- mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_read:inv -> jtag_uart_0:av_read_n
 	signal mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_write_ports_inv : std_logic;                     -- mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_write:inv -> jtag_uart_0:av_write_n
-	signal mm_interconnect_0_start_s1_write_ports_inv                      : std_logic;                     -- mm_interconnect_0_start_s1_write:inv -> start:write_n
 	signal mm_interconnect_0_digit_1_s1_write_ports_inv                    : std_logic;                     -- mm_interconnect_0_digit_1_s1_write:inv -> digit_1:write_n
 	signal mm_interconnect_0_digit_2_s1_write_ports_inv                    : std_logic;                     -- mm_interconnect_0_digit_2_s1_write:inv -> digit_2:write_n
 	signal mm_interconnect_0_digit_3_s1_write_ports_inv                    : std_logic;                     -- mm_interconnect_0_digit_3_s1_write:inv -> digit_3:write_n
 	signal mm_interconnect_0_timer_0_s1_write_ports_inv                    : std_logic;                     -- mm_interconnect_0_timer_0_s1_write:inv -> timer_0:write_n
-	signal rst_controller_reset_out_reset_ports_inv                        : std_logic;                     -- rst_controller_reset_out_reset:inv -> [digit_1:reset_n, digit_2:reset_n, digit_3:reset_n, jtag_uart_0:rst_n, nios2_gen2_0:reset_n, start:reset_n, timer_0:reset_n]
+	signal rst_controller_reset_out_reset_ports_inv                        : std_logic;                     -- rst_controller_reset_out_reset:inv -> [digit_1:reset_n, digit_2:reset_n, digit_3:reset_n, jtag_uart_0:rst_n, nios2_gen2_0:reset_n, timer_0:reset_n]
 
 begin
 
@@ -436,19 +408,6 @@ begin
 			freeze     => '0'                                               -- (terminated)
 		);
 
-	start : component TAIBI_Lab2_qsys_file_start
-		port map (
-			clk        => clk_clk,                                    --                 clk.clk
-			reset_n    => rst_controller_reset_out_reset_ports_inv,   --               reset.reset_n
-			address    => mm_interconnect_0_start_s1_address,         --                  s1.address
-			write_n    => mm_interconnect_0_start_s1_write_ports_inv, --                    .write_n
-			writedata  => mm_interconnect_0_start_s1_writedata,       --                    .writedata
-			chipselect => mm_interconnect_0_start_s1_chipselect,      --                    .chipselect
-			readdata   => mm_interconnect_0_start_s1_readdata,        --                    .readdata
-			in_port    => start_external_connection_export,           -- external_connection.export
-			irq        => irq_mapper_receiver1_irq                    --                 irq.irq
-		);
-
 	timer_0 : component TAIBI_Lab2_qsys_file_timer_0
 		port map (
 			clk        => clk_clk,                                      --   clk.clk
@@ -458,7 +417,7 @@ begin
 			readdata   => mm_interconnect_0_timer_0_s1_readdata,        --      .readdata
 			chipselect => mm_interconnect_0_timer_0_s1_chipselect,      --      .chipselect
 			write_n    => mm_interconnect_0_timer_0_s1_write_ports_inv, --      .write_n
-			irq        => irq_mapper_receiver2_irq                      --   irq.irq
+			irq        => irq_mapper_receiver1_irq                      --   irq.irq
 		);
 
 	mm_interconnect_0 : component TAIBI_Lab2_qsys_file_mm_interconnect_0
@@ -514,11 +473,6 @@ begin
 			onchip_memory2_0_s1_byteenable                 => mm_interconnect_0_onchip_memory2_0_s1_byteenable,            --                                         .byteenable
 			onchip_memory2_0_s1_chipselect                 => mm_interconnect_0_onchip_memory2_0_s1_chipselect,            --                                         .chipselect
 			onchip_memory2_0_s1_clken                      => mm_interconnect_0_onchip_memory2_0_s1_clken,                 --                                         .clken
-			start_s1_address                               => mm_interconnect_0_start_s1_address,                          --                                 start_s1.address
-			start_s1_write                                 => mm_interconnect_0_start_s1_write,                            --                                         .write
-			start_s1_readdata                              => mm_interconnect_0_start_s1_readdata,                         --                                         .readdata
-			start_s1_writedata                             => mm_interconnect_0_start_s1_writedata,                        --                                         .writedata
-			start_s1_chipselect                            => mm_interconnect_0_start_s1_chipselect,                       --                                         .chipselect
 			timer_0_s1_address                             => mm_interconnect_0_timer_0_s1_address,                        --                               timer_0_s1.address
 			timer_0_s1_write                               => mm_interconnect_0_timer_0_s1_write,                          --                                         .write
 			timer_0_s1_readdata                            => mm_interconnect_0_timer_0_s1_readdata,                       --                                         .readdata
@@ -532,7 +486,6 @@ begin
 			reset         => rst_controller_reset_out_reset, -- clk_reset.reset
 			receiver0_irq => irq_mapper_receiver0_irq,       -- receiver0.irq
 			receiver1_irq => irq_mapper_receiver1_irq,       -- receiver1.irq
-			receiver2_irq => irq_mapper_receiver2_irq,       -- receiver2.irq
 			sender_irq    => nios2_gen2_0_irq_irq            --    sender.irq
 		);
 
@@ -606,8 +559,6 @@ begin
 	mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_read_ports_inv <= not mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_read;
 
 	mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_write_ports_inv <= not mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_write;
-
-	mm_interconnect_0_start_s1_write_ports_inv <= not mm_interconnect_0_start_s1_write;
 
 	mm_interconnect_0_digit_1_s1_write_ports_inv <= not mm_interconnect_0_digit_1_s1_write;
 

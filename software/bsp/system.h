@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'TAIBI_Lab2_qsys_file'
  * SOPC Builder design path: ../../TAIBI_Lab2_qsys_file.sopcinfo
  *
- * Generated: Sat Jan 20 12:26:30 CET 2024
+ * Generated: Sat Jan 20 16:07:17 CET 2024
  */
 
 /*
@@ -316,33 +316,6 @@
 
 
 /*
- * start configuration
- *
- */
-
-#define ALT_MODULE_CLASS_start altera_avalon_pio
-#define START_BASE 0x21090
-#define START_BIT_CLEARING_EDGE_REGISTER 0
-#define START_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define START_CAPTURE 1
-#define START_DATA_WIDTH 1
-#define START_DO_TEST_BENCH_WIRING 0
-#define START_DRIVEN_SIM_VALUE 0
-#define START_EDGE_TYPE "FALLING"
-#define START_FREQ 50000000
-#define START_HAS_IN 1
-#define START_HAS_OUT 0
-#define START_HAS_TRI 0
-#define START_IRQ 1
-#define START_IRQ_INTERRUPT_CONTROLLER_ID 0
-#define START_IRQ_TYPE "EDGE"
-#define START_NAME "/dev/start"
-#define START_RESET_VALUE 0
-#define START_SPAN 16
-#define START_TYPE "altera_avalon_pio"
-
-
-/*
  * timer_0 configuration
  *
  */
@@ -353,7 +326,7 @@
 #define TIMER_0_COUNTER_SIZE 32
 #define TIMER_0_FIXED_PERIOD 0
 #define TIMER_0_FREQ 50000000
-#define TIMER_0_IRQ 2
+#define TIMER_0_IRQ 1
 #define TIMER_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define TIMER_0_LOAD_VALUE 49999999
 #define TIMER_0_MULT 1.0

@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>20 janv. 2024 12:26:30</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1705749990571</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>20 janv. 2024 16:07:17</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1705763237023</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>.\</BspGeneratedLocation>
         <BspSettingsFile>software\bsp\settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\TAIBI_Lab2_qsys_file.sopcinfo</SopcDesignFile>
@@ -925,12 +925,6 @@
         <MemoryMap>
                 <slaveDescriptor>digit_1</slaveDescriptor>
                 <addressRange>0x00021080 - 0x0002108F</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>start</slaveDescriptor>
-                <addressRange>0x00021090 - 0x0002109F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
