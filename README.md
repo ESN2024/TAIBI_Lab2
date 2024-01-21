@@ -21,7 +21,7 @@ Les blocs IP utilisés (voir schéma au-dessus) sont les suivants:
 - **JTAG UART:** permettant le débogage.
 - **Clock:** 50 MHz.
 - **Timer:** (seulement pour la version 2) bloc IP timer pour generer des interruptions avec un niveau d'interruption 1.
-- **3 PIO de 4 bits en sortie**: .
+- **3 PIO de 4 bits en sortie**
 
 #### 2 - Fichier QSYS:
 ##### 2.1 - Version 1 :
