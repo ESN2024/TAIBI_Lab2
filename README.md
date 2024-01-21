@@ -4,8 +4,17 @@ Ce dépôt github contient les deux versions demandées dans le Lab2, un compteu
 
 # II - L'architecture du système:
 #### 1 - Architecture du design:
-[Image de l'architecture sans timer ![Alt text](https://assets.digitalocean.com/articles/alligator/boo.svg "a title")]
-[Image de l'architecture avec timer ![Alt text](https://assets.digitalocean.com/articles/alligator/boo.svg "a title")]
+![plot](./photos/arch_without_Timer_.png)
+<div align="center">
+  Figure - 1 : Design du compteur sans timer
+</div>
+
+![plot](./photos/arch_with_Timer.png)
+ <div align="center">
+  Figure - 2 : Design du compteur avec timer
+</div>
+
+
 Les blocs IP utilisés (voir schéma au-dessus) sont les suivants:
 - **NIOS II Core:** un softcore d'architecture Harvard et de jeu d'instruction réduit (RISC 32 bits) en mode economy.
 - **Memoire RAM:** 40 ko.
@@ -16,10 +25,17 @@ Les blocs IP utilisés (voir schéma au-dessus) sont les suivants:
 
 #### 2 - Fichier QSYS:
 ##### 2.1 - Version 1 :
-[Image de l'architecture]
+![plot](./photos/QSYS_without_Timer.png)
+<div align="center">
+  Figure - 3 : Architecture QSYS du compteur sans timer
+</div>
+
 ##### 2.2 - Version 2 :
-[Image de l'architecture]
-Dans cette version Le timer gènère  une interruption de niveau 1, les paramètres de ce 
+![plot](./photos/QSYS_Timer.png)
+ <div align="center">
+  Figure - 4 : Architecture QSYS du compteur avec timer
+ </div>
+  Dans cette version Le timer gènère  une interruption de niveau 1.
 
 # III - Progrès:
 #### 1 - Platform Designer :
@@ -66,8 +82,14 @@ Ma stratégie pour effectuer ce TP a été réparties par plusieurs étape, pour
 
 # IV - Résultats:
 La video ci-dessous montre une démonstration du compteur sans timer :
-[Video]
-La video ci-dessous montre une démonstration du compteur avec timer :
-[Video]
+
+https://github.com/ESN2024/TAIBI_Lab2/assets/114927888/ecd918fe-37c7-4264-81b8-e8ad1345fa5c
+
+
+La video ci-dessous montre une démonstration du compteur avec timer (1s) :
+
+https://github.com/ESN2024/TAIBI_Lab2/assets/114927888/e39e0df1-26c3-4fa7-bf9f-f09cd0bb4f08
+
+
 # V - Conclusion:
 L'utilisation de l'interruption dans le Lab1 a été très utile, car ce deuxième Lab2 constitue une application directe de l'interruption par timer. L'utilisation des macros fournies par le BSP est également très utile, car cela facilite la manipulation des registres.
