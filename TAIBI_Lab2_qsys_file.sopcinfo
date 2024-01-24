@@ -5,11 +5,11 @@
  version="1.0"
  fabric="QSYS">
  <!-- Format version 18.1 625 (Future versions may contain additional information.) -->
- <!-- 2024.01.20.16:04:09 -->
+ <!-- 2024.01.24.12:13:52 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1705763049</value>
+  <value>1706094831</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -5103,7 +5103,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="instSlaveMapParam">
    <type>java.lang.String</type>
-   <value><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x10000' end='0x1A028' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x20800' end='0x21000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='digit_3.s1' start='0x21060' end='0x21070' type='altera_avalon_pio.s1' /><slave name='digit_2.s1' start='0x21070' end='0x21080' type='altera_avalon_pio.s1' /><slave name='digit_1.s1' start='0x21080' end='0x21090' type='altera_avalon_pio.s1' /></address-map>]]></value>
+   <value><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x10000' end='0x1A028' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x20800' end='0x21000' type='altera_nios2_gen2.debug_mem_slave' /></address-map>]]></value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -6148,30 +6148,6 @@ parameters are a RESULT of the module parameters. -->
     <baseAddress>65536</baseAddress>
     <span>41000</span>
    </memoryBlock>
-   <memoryBlock>
-    <isBridge>false</isBridge>
-    <moduleName>digit_1</moduleName>
-    <slaveName>s1</slaveName>
-    <name>digit_1.s1</name>
-    <baseAddress>135296</baseAddress>
-    <span>16</span>
-   </memoryBlock>
-   <memoryBlock>
-    <isBridge>false</isBridge>
-    <moduleName>digit_2</moduleName>
-    <slaveName>s1</slaveName>
-    <name>digit_2.s1</name>
-    <baseAddress>135280</baseAddress>
-    <span>16</span>
-   </memoryBlock>
-   <memoryBlock>
-    <isBridge>false</isBridge>
-    <moduleName>digit_3</moduleName>
-    <slaveName>s1</slaveName>
-    <name>digit_3.s1</name>
-    <baseAddress>135264</baseAddress>
-    <span>16</span>
-   </memoryBlock>
   </interface>
   <interface name="irq" kind="interrupt_receiver" version="18.1">
    <!-- The connection points exposed by a module instance for the
@@ -6814,7 +6790,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.INIT_MEM_CONTENT</name>
-   <value>0</value>
+   <value>1</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.INSTANCE_ID</name>
@@ -6822,7 +6798,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.NON_DEFAULT_INIT_FILE_ENABLED</name>
-   <value>0</value>
+   <value>1</value>
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.RAM_BLOCK_TYPE</name>
@@ -6942,7 +6918,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="initMemContent">
    <type>boolean</type>
-   <value>false</value>
+   <value>true</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -6950,9 +6926,9 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="initializationFileName">
    <type>java.lang.String</type>
-   <value>onchip_mem.hex</value>
+   <value>E:/PortableGit/TAIBI_Lab2/software/app/mem_init/TAIBI_Lab2_qsys_file_onchip_memory2_0.hex</value>
    <derived>false</derived>
-   <enabled>false</enabled>
+   <enabled>true</enabled>
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
@@ -6960,7 +6936,7 @@ the requested settings for a module instance. -->
    <type>boolean</type>
    <value>false</value>
    <derived>false</derived>
-   <enabled>false</enabled>
+   <enabled>true</enabled>
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
@@ -7038,9 +7014,9 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="useNonDefaultInitFile">
    <type>boolean</type>
-   <value>false</value>
+   <value>true</value>
    <derived>false</derived>
-   <enabled>false</enabled>
+   <enabled>true</enabled>
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
@@ -7048,7 +7024,7 @@ the requested settings for a module instance. -->
    <type>boolean</type>
    <value>false</value>
    <derived>false</derived>
-   <enabled>false</enabled>
+   <enabled>true</enabled>
    <visible>false</visible>
    <valid>true</valid>
   </parameter>
@@ -7161,7 +7137,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="derived_init_file_name">
    <type>java.lang.String</type>
-   <value>TAIBI_Lab2_qsys_file_onchip_memory2_0.hex</value>
+   <value>E:/PortableGit/TAIBI_Lab2/software/app/mem_init/TAIBI_Lab2_qsys_file_onchip_memory2_0.hex</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -8891,159 +8867,6 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>s1</endConnectionPoint>
  </connection>
  <connection
-   name="nios2_gen2_0.instruction_master/digit_1.s1"
-   kind="avalon"
-   version="18.1"
-   start="nios2_gen2_0.instruction_master"
-   end="digit_1.s1">
-  <parameter name="arbitrationPriority">
-   <type>int</type>
-   <value>1</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="baseAddress">
-   <type>java.math.BigInteger</type>
-   <value>0x00021080</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="defaultConnection">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>nios2_gen2_0</startModule>
-  <startConnectionPoint>instruction_master</startConnectionPoint>
-  <endModule>digit_1</endModule>
-  <endConnectionPoint>s1</endConnectionPoint>
- </connection>
- <connection
-   name="nios2_gen2_0.instruction_master/digit_2.s1"
-   kind="avalon"
-   version="18.1"
-   start="nios2_gen2_0.instruction_master"
-   end="digit_2.s1">
-  <parameter name="arbitrationPriority">
-   <type>int</type>
-   <value>1</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="baseAddress">
-   <type>java.math.BigInteger</type>
-   <value>0x00021070</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="defaultConnection">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>nios2_gen2_0</startModule>
-  <startConnectionPoint>instruction_master</startConnectionPoint>
-  <endModule>digit_2</endModule>
-  <endConnectionPoint>s1</endConnectionPoint>
- </connection>
- <connection
-   name="nios2_gen2_0.instruction_master/digit_3.s1"
-   kind="avalon"
-   version="18.1"
-   start="nios2_gen2_0.instruction_master"
-   end="digit_3.s1">
-  <parameter name="arbitrationPriority">
-   <type>int</type>
-   <value>1</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="baseAddress">
-   <type>java.math.BigInteger</type>
-   <value>0x00021060</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="defaultConnection">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>nios2_gen2_0</startModule>
-  <startConnectionPoint>instruction_master</startConnectionPoint>
-  <endModule>digit_3</endModule>
-  <endConnectionPoint>s1</endConnectionPoint>
- </connection>
- <connection
    name="clk_0.clk/nios2_gen2_0.clk"
    kind="clock"
    version="18.1"
@@ -9833,7 +9656,7 @@ parameters are a RESULT of the module parameters. -->
   <version>18.1</version>
  </plugin>
  <plugin>
-  <instanceCount>12</instanceCount>
+  <instanceCount>9</instanceCount>
   <name>avalon</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>
